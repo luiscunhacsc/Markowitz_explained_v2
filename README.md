@@ -121,4 +121,3 @@ For issues or suggestions, please open an **Issue** on GitHub:
 *Happy optimizing your portfolio!*
 
 *Author: Luís Simões da Cunha*
-```
