@@ -1,49 +1,48 @@
-# Black-Scholes Greeks Explained
+# Markowitz Portfolio Optimization Explained
 
 ## 1. What Is This?
 
-The **Black-Scholes model** is a mathematical model used for pricing options. The "Greeks" (Delta, Gamma, Theta, Vega, Rho) are metrics that measure how the price of an option changes with various factors (like the price of the underlying asset, the time to expiration, volatility, etc.).
+The **Markowitz Portfolio Optimization** model—also known as the **Mean–Variance Framework**—is a cornerstone of modern portfolio theory. It helps investors construct an optimal portfolio by balancing expected return against risk (measured by variance or standard deviation).
 
-This project includes a small interactive application where you can:
-- Input option parameters (strike price, underlying price, volatility, risk-free rate, time to expiration).
-- Visualize how each Greek changes as you alter these parameters.
+This project features an interactive application where you can:
+
+- **Set a Target Return:** Adjust your desired portfolio return using a slider.
+- **Compute Optimal Weights:** See how the analytical solution of the Markowitz model allocates weights among assets.
+- **Visualize the Efficient Frontier:** Explore the trade-off between risk and return, with your selected portfolio highlighted.
 
 ## 2. Setting Up a Local Development Environment
 
-To modify and run the code locally, follow these steps:
-
 ### 2.1 Prerequisites
 
-1. **A computer** (Windows, macOS, or Linux).
-2. **Python 3.9 or higher** (Python 3.12 preferred, but anything 3.9+ should be fine).
-   - If you do not have Python installed:
-     - Go to [python.org/downloads](https://www.python.org/downloads/) and install the latest version for your system.
-3. **Visual Studio Code (VS Code)**
+1. **A Computer** (Windows, macOS, or Linux).
+2. **Python 3.9 or higher** (Python 3.12 preferred).  
+   - If you do not have Python installed, visit [python.org/downloads](https://www.python.org/downloads/) to install the latest version.
+3. **Visual Studio Code (VS Code)**  
    - Download from [code.visualstudio.com](https://code.visualstudio.com/)
-4. **Git** (optional, but recommended for cloning the repository).
+4. **Git** (optional but recommended for cloning the repository).  
    - Install from [git-scm.com/downloads](https://git-scm.com/downloads)
 
 ### 2.2 Downloading the Project
 
 #### Option 1: Cloning via Git (Recommended)
 
-1. Open **Terminal** (macOS/Linux) or **Command Prompt** / **PowerShell** (Windows).
+1. Open **Terminal** (macOS/Linux) or **Command Prompt/PowerShell** (Windows).
 2. Navigate to the folder where you want to download the project:
    ```bash
    cd Documents
    ```
 3. Run the following command:
    ```bash
-   git clone https://github.com/luiscunhacsc/blackscholes_greeks_explained.git
+   git clone https://github.com/luiscunhacsc/Markowitz_explained_v2.git
    ```
 4. Enter the project folder:
    ```bash
-   cd blackscholes_greeks_explained
+   cd Markowitz_explained_v2
    ```
 
 #### Option 2: Download as ZIP
 
-1. Visit [https://github.com/luiscunhacsc/blackscholes_greeks_explained](https://github.com/luiscunhacsc/blackscholes_greeks_explained)
+1. Visit [https://github.com/luiscunhacsc/Markowitz_explained_v2](https://github.com/luiscunhacsc/Markowitz_explained_v2)
 2. Click **Code > Download ZIP**.
 3. Extract the ZIP file into a local folder.
 
@@ -52,8 +51,8 @@ To modify and run the code locally, follow these steps:
 It is recommended to use a virtual environment (`venv`) to manage dependencies:
 
 1. Open **VS Code** and navigate to the project folder.
-2. Open the integrated terminal (`Ctrl + ~` in VS Code or `Terminal > New Terminal`).
-3. Run the following commands to create and activate a virtual environment:
+2. Open the integrated terminal (`Ctrl + ~` in VS Code or via **Terminal > New Terminal**).
+3. Create and activate a virtual environment:
    ```bash
    python -m venv venv
    ```
@@ -77,42 +76,49 @@ pip install -r requirements.txt
 
 This installs libraries such as:
 - **Streamlit** (for the interactive UI)
-- **NumPy** and **SciPy** (for mathematical calculations)
-- **Matplotlib** (for plotting results)
+- **NumPy** (for numerical computations)
+- **Matplotlib** (for plotting the efficient frontier)
 
 ## 3. Running the Application
 
 To launch the application, execute:
 
 ```bash
-streamlit run blackscholes_with_greeks_EN.py
+streamlit run markowitz.py
 ```
 
-This should open a new tab in your web browser with the interactive tool. If it does not open automatically, check the terminal for a URL (e.g., `http://localhost:8501`) and open it manually.
+A new tab should open in your web browser displaying the interactive tool. If it does not open automatically, check the terminal for a URL (e.g., `http://localhost:8501`) and open it manually.
 
 ### 3.1 Troubleshooting
 
-- **ModuleNotFoundError:** Ensure the virtual environment is activated (`venv\Scripts\activate` or `source venv/bin/activate`).
-- **Python not recognized:** Ensure Python is installed and added to your system's PATH.
-- **Browser does not open:** Manually enter the `http://localhost:8501` URL in your browser.
+- **ModuleNotFoundError:** Ensure your virtual environment is activated (`venv\Scripts\activate` on Windows or `source venv/bin/activate` on macOS/Linux).
+- **Python not recognized:** Verify that Python is installed and added to your system's PATH.
+- **Browser does not open:** Manually enter the provided URL (e.g., `http://localhost:8501`) into your browser.
 
 ## 4. Editing the Code
 
-If you want to make modifications:
-1. Open `blackscholes_with_greeks_EN.py` in **VS Code**.
-2. Modify the code as needed.
-3. Restart the Streamlit app after changes (`Ctrl + C` to stop, then rerun `streamlit run blackscholes_with_greeks_EN.py`).
+To modify the application:
+1. Open `markowitz.py` in **VS Code**.
+2. Make your changes and save the file.
+3. Restart the Streamlit app after changes by stopping it with `Ctrl + C` and rerunning:
+   ```bash
+   streamlit run markowitz.py
+   ```
 
 ## 5. Additional Resources
 
-- **Streamlit Documentation**: [docs.streamlit.io](https://docs.streamlit.io)
-- **Black-Scholes Model**: [Investopedia Guide](https://www.investopedia.com/terms/b/blackscholes.asp)
+- **Streamlit Documentation:** [docs.streamlit.io](https://docs.streamlit.io)
+- **Markowitz Portfolio Theory:** [Investopedia Guide](https://www.investopedia.com/terms/m/modernportfoliotheory.asp)
+- **Modern Portfolio Theory (Wikipedia):** [Modern Portfolio Theory](https://en.wikipedia.org/wiki/Modern_portfolio_theory)
 
 ## 6. Support
 
-For issues or suggestions, open an **Issue** on GitHub:
-[https://github.com/luiscunhacsc/blackscholes_greeks_explained/issues](https://github.com/luiscunhacsc/blackscholes_greeks_explained/issues)
+For issues or suggestions, please open an **Issue** on GitHub:  
+[https://github.com/luiscunhacsc/Markowitz_explained_v2/issues](https://github.com/luiscunhacsc/Markowitz_explained_v2/issues)
 
 ---
-*Happy exploring the Black-Scholes Greeks!*
 
+*Happy optimizing your portfolio!*
+
+*Author: Luís Simões da Cunha*
+```
